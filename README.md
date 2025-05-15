@@ -183,6 +183,12 @@ git switch -c feature/INPRO-1-configure-resource
 
 <!-- TBD -->
 
+## Future Improvements
+
+In the future it would be nice to integrate **[Pothos](https://pothos-graphql.dev/)**, a plugin based GraphQL schema builder for typescript.
+It makes building graphql schemas in typescript easy, fast and enjoyable.
+An example application is available [here](https://github.com/prisma/prisma-examples/tree/latest/orm/graphql)
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
