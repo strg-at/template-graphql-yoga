@@ -141,8 +141,8 @@ task npm:run -- build:gql-schema
 This will generate the types in the file `./src/schema/resolvers-types.ts`.
 
 **Note:**
-Currently there are two graphql-modules present: `books` and `heartbeat`.
-However, they only serve as an example on how to structure the source code and should be later.
+Currently there are two graphql-modules present: `books`, `heartbeat` and `scalars`.
+However, they only serve as an example on how to structure the source code and could be deleted be later.
 
 ## Configuration
 

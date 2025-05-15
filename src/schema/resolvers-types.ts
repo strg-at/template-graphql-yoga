@@ -6,7 +6,6 @@ export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: 
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> = { [_ in K]?: never };
 export type Incremental<T> = T | { [P in keyof T]?: P extends ' $fragmentName' | '__typename' ? T[P] : never };
-export type RequireFields<T, K extends keyof T> = Omit<T, K> & { [P in K]-?: NonNullable<T[P]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: { input: string; output: string; }
@@ -31,28 +30,12 @@ export type Book = {
 export type Query = {
   __typename?: 'Query';
   books: Array<Maybe<Book>>;
-  errorCodes: Array<Maybe<Scalars['String']['output']>>;
-  getAllUsers?: Maybe<Array<Maybe<User>>>;
-  getUserById?: Maybe<User>;
   heartbeat: Scalars['String']['output'];
 };
 
 
 export type QueryBooksArgs = {
   ids?: InputMaybe<Array<Scalars['ID']['input']>>;
-};
-
-
-export type QueryGetUserByIdArgs = {
-  id: Scalars['ID']['input'];
-};
-
-export type User = {
-  __typename?: 'User';
-  email?: Maybe<Scalars['String']['output']>;
-  id: Scalars['ID']['output'];
-  name: Scalars['String']['output'];
-  profileImage?: Maybe<Scalars['String']['output']>;
 };
 
 export type WithIndex<TObject> = TObject & Record<string, any>;
@@ -137,7 +120,6 @@ export type ResolversTypes = ResolversObject<{
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']['output']>;
   URL: ResolverTypeWrapper<Scalars['URL']['output']>;
-  User: ResolverTypeWrapper<User>;
 }>;
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -152,7 +134,6 @@ export type ResolversParentTypes = ResolversObject<{
   Query: {};
   String: Scalars['String']['output'];
   URL: Scalars['URL']['output'];
-  User: User;
 }>;
 
 export type BookResolvers<ContextType = any, ParentType extends ResolversParentTypes['Book'] = ResolversParentTypes['Book']> = ResolversObject<{
@@ -180,23 +161,12 @@ export interface PositiveIntScalarConfig extends GraphQLScalarTypeConfig<Resolve
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
   books?: Resolver<Array<Maybe<ResolversTypes['Book']>>, ParentType, ContextType, Partial<QueryBooksArgs>>;
-  errorCodes?: Resolver<Array<Maybe<ResolversTypes['String']>>, ParentType, ContextType>;
-  getAllUsers?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType>;
-  getUserById?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryGetUserByIdArgs, 'id'>>;
   heartbeat?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
 }>;
 
 export interface UrlScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['URL'], any> {
   name: 'URL';
 }
-
-export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = ResolversObject<{
-  email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
-  name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  profileImage?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-}>;
 
 export type Resolvers<ContextType = any> = ResolversObject<{
   Book?: BookResolvers<ContextType>;
@@ -206,6 +176,5 @@ export type Resolvers<ContextType = any> = ResolversObject<{
   PositiveInt?: GraphQLScalarType;
   Query?: QueryResolvers<ContextType>;
   URL?: GraphQLScalarType;
-  User?: UserResolvers<ContextType>;
 }>;
 

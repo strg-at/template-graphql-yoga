@@ -55,16 +55,6 @@ export const gatewayApp = createYoga({
       query Heartbeat {
         heartbeat
       }
-
-      query ErrorCodes {
-        errorCodes
-      }
-
-      query User {
-        getUserById(id: 3) {
-          id
-        }
-      }
     `,
   },
 })

@@ -1,5 +1,3 @@
 export * from './heartbeat'
-export * from './users'
-export * from './error-codes'
 export * from './scalars'
 export * from './book'
