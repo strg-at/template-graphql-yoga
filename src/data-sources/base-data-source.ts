@@ -2,6 +2,8 @@ import { logger } from '@strg/logging-winston'
 
 export abstract class BaseDataSource {
   url: string = ''
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async request(endpoint: string) {
     try {
       // const headers = {

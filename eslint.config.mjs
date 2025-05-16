@@ -24,7 +24,7 @@ export default [
       'node_modules/*',
       'dist/*',
       'src/schema/resolvers-types.ts',
-      'eslint.config.js',
+      'eslint.config.mjs',
     ],
   },
   ...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:jsdoc/recommended'),

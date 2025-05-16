@@ -5,7 +5,7 @@
 !/resources
 !/src
 !.eslintrc.js
-!eslint.config.js
+!eslint.config.mjs
 !.markdownlint.yaml
 !.npmrc
 !.nycrc.json
