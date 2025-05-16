@@ -1,0 +1,3 @@
+*.sops.*
+src/schema/resolvers-types.ts
+*resolvers-types.ts*

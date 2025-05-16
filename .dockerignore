@@ -1,0 +1,29 @@
+# Ignore everything
+*
+
+# Allow files and directories
+!/resources
+!/src
+!.eslintrc.js
+!eslint.config.mjs
+!.markdownlint.yaml
+!.npmrc
+!.nycrc.json
+!.prettierignore
+!.prettierrc.js
+!.yamllint.yaml
+!codegen.ts
+!LICENSE
+!package-lock.json
+!package.json
+!README.md
+!tsconfig.json
+!.mocharc.json
+
+!graphql.config.ts
+
+# Ignore unnecessary files inside allowed directories
+# This should go after the allowed directories
+**/*.log
+**/.DS_Store
+**/Thumbs.db
