@@ -131,6 +131,18 @@ task npm:run -- start
 task npm:run -- dev
 ```
 
+### Running using local node
+
+If you want to run the project using your local Node.js instead of the dockerized one, you need to pick correct Node version by running:
+```bash
+nvm use
+```
+
+Then it is possible turn on the dev server using:
+```bash
+npm run dev
+```
+
 ## GraphQL
 
 ### Generating types from the schema
