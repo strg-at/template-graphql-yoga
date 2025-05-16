@@ -38,6 +38,7 @@ Short project description
   - [App configuration](#app-configuration)
   - [Preparation](#preparation)
 - [Known Issues](#known-issues)
+- [Future Improvements](#future-improvements)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 </details>

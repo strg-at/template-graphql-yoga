@@ -13,7 +13,7 @@ export const apiBookToBook = (apiBook: ApiBook, language: LANG) => {
   return {
     id: apiBook.id,
     title: apiBook[`title_${language}`],
-    author: apiBook.author
+    author: apiBook.author,
   }
 }
 

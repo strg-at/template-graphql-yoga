@@ -21,14 +21,14 @@ export abstract class BaseDataSource {
           id: '1',
           title_en: 'All Quiet on the Western Front',
           title_de: 'Im Westen nichts Neues',
-          author: 'Erich Maria Remarque'
+          author: 'Erich Maria Remarque',
         },
         {
           id: '2',
           title_en: 'The Little Prince',
           title_de: 'Der kleine Prinz',
-          author: 'Antoine de Saint-Exupéry'
-        }
+          author: 'Antoine de Saint-Exupéry',
+        },
       ]
     } catch (error) {
       logger.error('Error fetching data:', error)

@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import { resolvers } from './resolvers'
 import { ApiBook } from '../../data-sources/book'
-import {Context} from '../../gateway'
+import { Context } from '../../gateway'
 
 describe('Books Resolver', () => {
   describe('Query.books', () => {
@@ -22,7 +22,7 @@ describe('Books Resolver', () => {
 
     const mockFetchBooks = async (ids: string[] | undefined) => {
       if (ids?.length) {
-        return mockBooks.filter(book => ids?.includes(book.id))
+        return mockBooks.filter((book) => ids?.includes(book.id))
       }
       return mockBooks
     }

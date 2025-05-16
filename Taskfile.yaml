@@ -2,8 +2,8 @@
 version: "3"
 
 vars:
-  PROJECT_DIR: "/home/loffler/Documents/work/strg/node-graphql-template"
-    #sh: "git rev-parse --show-toplevel"
+  PROJECT_DIR:
+    sh: "git rev-parse --show-toplevel"
   SRC_DIR: "{{.PROJECT_DIR}}/src"
 
 includes:
