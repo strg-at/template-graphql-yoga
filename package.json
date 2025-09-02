@@ -40,7 +40,7 @@
     "graphql-tag": "2.12.6",
     "graphql-yoga": "5.13.4",
     "js-yaml": "4.1.0",
-    "morgan": "1.10.0",
+    "morgan": "1.10.1",
     "ts-custom-error": "3.3.1",
     "yamljs": "0.3.0"
   },
