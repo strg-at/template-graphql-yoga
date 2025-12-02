@@ -32,7 +32,7 @@
     "@opentelemetry/semantic-conventions": "1.32.0",
     "@strg/logging-winston": "3.0.1",
     "cors": "2.8.5",
-    "express": "5.1.0",
+    "express": "5.2.0",
     "express-prom-bundle": "8.0.0",
     "graphql-config": "5.1.5",
     "graphql-modules": "3.0.0",
